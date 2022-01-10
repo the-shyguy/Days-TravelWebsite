@@ -1,0 +1,316 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+  position: relative;
+  background: rgb(235, 235, 235);
+}
+main {
+  position: absolute;
+}
+#logo {
+  color: #17181a;
+  font-family: "Abril Fatface";
+}
+.nav-header {
+  position: relative;
+  min-height: 10vh;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  color: #17181a;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+  padding: 1.5rem 0;
+  z-index: 2;
+}
+.line1,
+.line2 {
+  width: 3rem;
+  height: 0.2rem;
+  margin: 0.4rem;
+  background: #17181a;
+  pointer-events: none;
+}
+.slide {
+  min-height: 100vh;
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #dededa;
+  border-radius: 5px;
+  padding: 0 2rem;
+  box-shadow: 0 0 30px #191919;
+}
+.hero-desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  flex-basis: 30rem;
+  padding-left: 5rem;
+  position: relative;
+  overflow: hidden;
+}
+.hero-img {
+  position: relative;
+  flex: 1;
+  flex-basis: 30rem;
+  overflow: hidden;
+}
+.hero-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.mountain {
+  background: brown;
+}
+
+.hike {
+  background: #1565c0;
+}
+
+.fashion {
+  background: #00695c;
+}
+.hero-desc h2 {
+  font-family: "Abril Fatface";
+  font-size: 3.5rem;
+}
+.hero-desc p {
+  padding: 3rem 0;
+  font-size: 1.2rem;
+  color: #dededa;
+}
+.explore {
+  padding: 1rem 2rem;
+  background: none;
+  border: 1px solid #dededa;
+  color: #dededa;
+  font-size: 1rem;
+  text-decoration: none;
+  align-self: flex-start;
+  cursor: pointer;
+  transition: 0.25s ease-in-out;
+}
+.explore:hover {
+  background: #dededa;
+  color: #17181a;
+}
+.nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #dededa;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1;
+  opacity: 1;
+  clip-path: circle(50px at 100% -10%);
+  -webkit-clip-path: circle(50px at 100% -10%);
+}
+.burger {
+  cursor: pointer;
+}
+.nav-links {
+  font-size: 2.5rem;
+  flex-basis: 30rem;
+}
+.nav-links h3 {
+  padding: 3rem 0;
+}
+.contact {
+  flex-basis: 30rem;
+}
+.contact h2 {
+  font-size: 2.5rem;
+  padding: 3rem 0;
+}
+.reveal-img,
+.reveal-text {
+  position: absolute;
+  width: 100%;
+  height: 120%;
+  left: 0;
+  top: -10%;
+}
+
+.nav-active {
+  background: rgba(0, 114, 194, 0.5);
+  transform: scale(1.5);
+  transform-origin: 125% 125%;
+}
+.scrollmagic-pin-spacer {
+  position: static !important;
+}
+body.hide {
+  overflow: hidden;
+}
+
+/* Fashion Pages */
+.fashion1,
+.fashion2,
+.fashion3 {
+  min-height: 90vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 75%;
+  margin: auto;
+  color: white;
+  margin-top: 5rem;
+  flex-wrap: wrap;
+  position: relative;
+}
+.fashion-img {
+  height: 70vh;
+  flex-basis: 20rem;
+}
+.fashion-text {
+  flex-basis: 45rem;
+  margin-bottom: 15rem;
+}
+.fashion-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.fashion-text h1 {
+  font-size: 4.5rem;
+  padding: 3rem 0;
+}
+.fashion1 h1 {
+  color: rgb(255, 139, 93);
+}
+.fashion2 h1 {
+  color: rgb(167, 110, 231);
+}
+.fashion3 h1 {
+  color: rgb(86, 124, 228);
+}
+.fashion-text p {
+  font-size: 1.2rem;
+  display: flex;
+}
+.fashion-nr {
+  position: absolute;
+  font-size: 15rem;
+  left: 40%;
+  top: 56%;
+  color: white;
+  opacity: 0.3;
+  pointer-events: none;
+}
+.swipe {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+}
+.swipe1 {
+  background: rgb(167, 110, 231);
+  z-index: 5;
+}
+.swipe2 {
+  background: rgb(86, 124, 228);
+  z-index: 4;
+}
+.swipe3 {
+  background: rgb(255, 139, 93);
+  z-index: 3;
+}
+
+@media screen and (max-width: 1500px) {
+  .hero-img {
+    height: 50vh;
+  }
+  .fashion-text h1 {
+    font-size: 2rem;
+    padding: 1rem 0rem;
+  }
+  .fashion-text p {
+    font-size: 1.2rem;
+  }
+  .fashion-img img {
+    height: 50vh;
+    object-position: top;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  main {
+    width: 100%;
+    margin: 0;
+  }
+  .slide {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  .hero-desc {
+    padding: 0;
+  }
+  .hero-img {
+    padding-top: 4rem;
+  }
+  .hero-desc h2 {
+    font-size: 2.5rem;
+    padding: 1rem 0rem;
+  }
+  .hero-desc p {
+    padding: 2rem 1rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-align: center;
+  }
+  .explore {
+    width: 60%;
+    margin: auto;
+  }
+  .detail-slide {
+    width: 100%;
+    text-align: center;
+  }
+  .fashion-text p {
+    margin-bottom: 5rem;
+    padding: 0;
+  }
+  .fastion-text h1 {
+    margin: 2rem 0rem;
+  }
+  .fashion-nr {
+    font-size: 8rem;
+  }
+  .nav-bar {
+    display: block;
+  }
+  .nav-links {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 3rem;
+  }
+  .contact h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .contact p {
+    font-size: 1.2rem;
+    padding: 2rem;
+    text-align: center;
+  }
+}
